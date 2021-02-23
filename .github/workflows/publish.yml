@@ -24,7 +24,7 @@ jobs:
         working-directory: target/repo
       - run: git commit -am...
         working-directory: target/repo
-      - run: git remote add origin ${{ github.server }}/${{ github.repository }}
+      - run: git remote add origin ${{ github.server_url }}/${{ github.repository }}
         working-directory: target/repo
       - run: git push -u origin gh-pages
         working-directory: target/repo
