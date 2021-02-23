@@ -14,9 +14,6 @@ jobs:
         with:
           java-version: 14
       - run: mvn source:jar deploy -DaltDeploymentRepository=internal.repo::default::file://$PWD/target/repo
-  publish:
-    runs-on: ubuntu-latest
-    steps:
       - uses: JamesIves/github-pages-deploy-action@3.7.1
         with:
           SINGLE_COMMIT: true
