@@ -14,14 +14,20 @@ jobs:
         with:
           java-version: 14
       - run: mvn source:jar deploy -DaltDeploymentRepository=internal.repo::default::file://$PWD/target/repo
-      - run: cd target/repo
       - run: git init -b gh-pages
+        working-directory: target/repo
       - run: git config --global user.email "swined@gmail.com"
+        working-directory: target/repo
       - run: git config --global user.name "Alex Alexandrov"
+        working-directory: target/repo
       - run: git add --all
+        working-directory: target/repo
       - run: git commit -am...
-#      - run: git remote add origin ${{ github.repository }}
+        working-directory: target/repo
+      - run: git remote add origin ${{ github.repository }}
+        working-directory: target/repo
       - run: git push -u origin gh-pages
+        working-directory: target/repo
 #      - uses: JamesIves/github-pages-deploy-action@3.7.1
 #        with:
 #          SINGLE_COMMIT: true
