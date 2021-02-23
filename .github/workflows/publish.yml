@@ -16,15 +16,15 @@ jobs:
       - run: mvn source:jar deploy -DaltDeploymentRepository=internal.repo::default::file://$PWD/target/repo
       - run: git init -b gh-pages
         working-directory: target/repo
-      - run: git config --global user.email "swined@gmail.com"
+      - run: git config --global user.email "action@example.com"
         working-directory: target/repo
-      - run: git config --global user.name "Alex Alexandrov"
+      - run: git config --global user.name "${{ github.repository_owner }}"
         working-directory: target/repo
       - run: git add --all
         working-directory: target/repo
       - run: git commit -am...
         working-directory: target/repo
-      - run: git remote add origin ${{ github.server_url }}/${{ github.repository }}
+      - run: git remote add origin https://github.com/${{ github.repository }}
         working-directory: target/repo
       - run: git push -u origin gh-pages
         working-directory: target/repo
