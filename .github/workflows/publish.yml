@@ -20,7 +20,7 @@ jobs:
       - run: git config --global user.name "Alex Alexandrov"
       - run: git add --all
       - run: git commit -am...
-      - run: git remote add origin ${{ github.repository }}
+#      - run: git remote add origin ${{ github.repository }}
       - run: git push -u origin gh-pages
 #      - uses: JamesIves/github-pages-deploy-action@3.7.1
 #        with:
