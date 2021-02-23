@@ -14,7 +14,7 @@ jobs:
         with:
           java-version: 14
       - run: mvn source:jar deploy -DaltDeploymentRepository=internal.repo::default::file://$PWD/target/repo
-      - run: cd target/repo && git init -b gh-pages && git remote add origin ${{ github.repository }} && git push -u origin gh-pages
+      - run: cd target/repo && git init -b gh-pages && git commit -am... && git remote add origin ${{ github.repository }} && git push -u origin gh-pages
 #      - uses: JamesIves/github-pages-deploy-action@3.7.1
 #        with:
 #          SINGLE_COMMIT: true
