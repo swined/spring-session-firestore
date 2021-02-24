@@ -1,0 +1,10 @@
+steps:
+- name: maven:3-jdk-11
+  entrypoint: mvn
+  args:
+  - source:jar
+  - deploy
+  - -DaltDeploymentRepository=internal.repo::default::file:///workspace/target/repo
+- name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+  entrypoint: gsutil
+  args: ['rsync', '-r', 'target/repo', 'gs://mvn.wlrs.dev/']
