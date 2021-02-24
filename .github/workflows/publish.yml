@@ -28,6 +28,6 @@ jobs:
       - uses: actions/setup-java@v1
         with:
           java-version: 14
-      - run: mvn source:jar deploy -DaltDeploymentRepository=github::default::https://maven.pkg.github.com/${{ github.repository }}
+      - run: mvn source:jar deploy -DaltDeploymentRepository=github::default::https://maven.pkg.github.com/swined
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
