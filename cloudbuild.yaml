@@ -7,4 +7,4 @@ steps:
   - -DaltDeploymentRepository=internal.repo::default::file:///workspace/target/repo
 - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
   entrypoint: gsutil
-  args: ['rsync', '-r', 'target/repo', 'gs://mvn.wlrs.dev/']
+  args: ['rsync', '-ra', 'public-read', 'target/repo', 'gs://mvn.wlrs.dev/']
