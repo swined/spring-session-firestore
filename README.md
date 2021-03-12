@@ -11,7 +11,7 @@
 ```
 <repository>
     <id>wlrs.dev</id>
-    <url>https://wlrs.dev/</url>
+    <url>https://wlrs.dev</url>
     <releases>
         <enabled>false</enabled>
     </releases>
