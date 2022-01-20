@@ -1,4 +1,4 @@
-package wtf.the.spring.session.datastore;
+package wtf.the.spring.session.firestore;
 
 import com.google.cloud.Timestamp;
 import com.google.cloud.firestore.CollectionReference;

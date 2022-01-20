@@ -1,4 +1,4 @@
-package wtf.the.spring.session.datastore;
+package wtf.the.spring.session.firestore;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
